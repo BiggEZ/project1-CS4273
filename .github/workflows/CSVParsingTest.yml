@@ -21,7 +21,7 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [windows-latest]
+        os: [windows-2022]
         java: [11.0.3]
       fail-fast: false
       max-parallel: 4
