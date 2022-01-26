@@ -12,14 +12,14 @@ public class Parser{
     public static boolean readFile(String mode){
         BufferedReader reader = null;
         Boolean test = false;
+        String[] alphabet = null;
         
         try {
             String line = "";
             reader =  new BufferedReader(new FileReader(mode + ".csv"));
-            reader.readLine();
             
             while ((line = reader.readLine()) != null) {
-                String[] alphabet = line.split(",");
+                alphabet = line.split(",");
             }
             
             test = validate(mode, alphabet);
@@ -45,7 +45,7 @@ public class Parser{
                 return false;
         }
         
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < input.length; i++)
         {
             if (!input[i].equals(test[i])) {
                 return false;
