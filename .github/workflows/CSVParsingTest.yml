@@ -39,4 +39,4 @@ jobs:
           SOME_PASSWORD: ${{ secrets.MY_PASSWORD }}
           USERNAME: ${{ github.actor }}
           PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-        run: mvn compile --Parser.java
+        run: javac Parser.java
