@@ -34,9 +34,12 @@ jobs:
         with:
           java-version: 1.11
 
-      - name: Verify with Maven
+      - name: Compile Parser
         env:
           SOME_PASSWORD: ${{ secrets.MY_PASSWORD }}
           USERNAME: ${{ github.actor }}
           PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         run: javac Parser.java
+      
+      - name: Run Parser
+        run: java Parser
